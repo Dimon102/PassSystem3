@@ -46,7 +46,8 @@ namespace WindowsFormsApp2
             //MessageBox.Show(DataBank.password_restrictions.ToString());
             if (DataBank.password_restrictions == true)
             {
-                checkBox.Checked = true;
+                checkBox1.Checked = true;
+                
             }
 
         }
@@ -97,13 +98,13 @@ namespace WindowsFormsApp2
             if (checkBox.Checked == true)
             {
                 DataBank.password_restrictions = true;
-                MessageBox.Show(checkBox.Text + "  включены");
+                //MessageBox.Show(checkBox.Text + "  включены");
                 
             }
             else
             {
                 DataBank.password_restrictions = false;
-                MessageBox.Show(checkBox.Text + "  отключены");
+                //MessageBox.Show(checkBox.Text + "  отключены");
             }
             using (StreamWriter writer = new StreamWriter(DataBank.password_restrictionsPath))
             {

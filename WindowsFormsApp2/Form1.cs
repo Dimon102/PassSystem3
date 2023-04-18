@@ -37,7 +37,10 @@ namespace WindowsFormsApp2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            DataBank.password_restrictionsPath = File.ReadLines(DataBank.password_restrictionsPath).ToString();
+            //DataBank.password_restrictionsPath = File.ReadLines(DataBank.password_restrictionsPath).ToString();
+            MessageBox.Show(File.ReadLines(DataBank.password_restrictionsPath).First());
+
+            DataBank.password_restrictionsPath = File.ReadLines(DataBank.password_restrictionsPath).First();
 
 
             bool answer;
