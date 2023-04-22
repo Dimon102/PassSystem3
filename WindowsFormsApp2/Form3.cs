@@ -43,6 +43,9 @@ namespace WindowsFormsApp2
             listBox2.Items.Clear();
             listBox2.Items.AddRange(DataBank.Block_Users.ToArray());
 
+            DataBank.password_restrictions = Convert.ToBoolean(File.ReadLines(DataBank.password_restrictionsPath).First());
+
+
             //MessageBox.Show(DataBank.password_restrictions.ToString());
             if (DataBank.password_restrictions == true)
             {

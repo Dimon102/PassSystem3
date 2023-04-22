@@ -38,9 +38,11 @@ namespace WindowsFormsApp2
         private void button1_Click(object sender, EventArgs e)
         {
             //DataBank.password_restrictionsPath = File.ReadLines(DataBank.password_restrictionsPath).ToString();
-            MessageBox.Show(File.ReadLines(DataBank.password_restrictionsPath).First());
 
-            DataBank.password_restrictionsPath = File.ReadLines(DataBank.password_restrictionsPath).First();
+            //MessageBox.Show(File.ReadLines(DataBank.password_restrictionsPath).First());
+            
+            DataBank.password_restrictions = Convert.ToBoolean(File.ReadLines(DataBank.password_restrictionsPath).First());
+
 
 
             bool answer;
@@ -69,5 +71,16 @@ namespace WindowsFormsApp2
 
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            //MessageBox.Show(File.ReadLines(DataBank.password_restrictionsPath).First());
+
+            //DataBank.password_restrictionsPath = File.ReadLines(DataBank.password_restrictionsPath)?.First();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
