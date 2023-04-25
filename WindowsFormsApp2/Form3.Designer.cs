@@ -48,6 +48,8 @@ namespace WindowsFormsApp2
             this.label6 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -203,11 +205,32 @@ namespace WindowsFormsApp2
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(49, 202);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(100, 36);
+            this.button6.TabIndex = 17;
+            this.button6.Text = "Ограничение на пароль";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(167, 202);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(84, 36);
+            this.button7.TabIndex = 18;
+            this.button7.Text = "Убрать ограничение";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(686, 390);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.label6);
@@ -252,5 +275,7 @@ namespace WindowsFormsApp2
         private Label label6;
         private Button button5;
         private CheckBox checkBox1;
+        private Button button6;
+        private Button button7;
     }
 }

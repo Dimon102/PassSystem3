@@ -114,5 +114,10 @@ namespace WindowsFormsApp2
                 writer.WriteLine(DataBank.password_restrictions.ToString());
             }
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            //ограничение пароля
+        }
     }
 }

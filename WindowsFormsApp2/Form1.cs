@@ -56,7 +56,7 @@ namespace WindowsFormsApp2
                 }
                 else
                 {
-                    MessageBox.Show("Пароль должен быть больше 8 символов");
+                    MessageBox.Show("Пароль слишком простой");
 
                 }
             }
