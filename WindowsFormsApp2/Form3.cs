@@ -119,5 +119,10 @@ namespace WindowsFormsApp2
         {
             //ограничение пароля
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            //снять ограничение
+        }
     }
 }

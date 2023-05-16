@@ -199,15 +199,15 @@ namespace WindowsFormsApp2
             this.checkBox1.AutoSize = true;
             this.checkBox1.Location = new System.Drawing.Point(512, 141);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(131, 17);
+            this.checkBox1.Size = new System.Drawing.Size(172, 17);
             this.checkBox1.TabIndex = 16;
-            this.checkBox1.Text = "Ограничения пароля";
+            this.checkBox1.Text = "Ограничения пароля на всех";
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(49, 202);
+            this.button6.Location = new System.Drawing.Point(406, 76);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(100, 36);
             this.button6.TabIndex = 17;
@@ -217,12 +217,13 @@ namespace WindowsFormsApp2
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(167, 202);
+            this.button7.Location = new System.Drawing.Point(406, 118);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(84, 36);
+            this.button7.Size = new System.Drawing.Size(100, 37);
             this.button7.TabIndex = 18;
             this.button7.Text = "Убрать ограничение";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // Form3
             // 
