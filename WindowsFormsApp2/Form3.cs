@@ -118,11 +118,15 @@ namespace WindowsFormsApp2
         private void button6_Click(object sender, EventArgs e)
         {
             //ограничение пароля
+            admin.Restriction(listBox1.SelectedItem.ToString());
+
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
             //снять ограничение
+            admin.unRestriction(listBox1.SelectedItem.ToString());
+
         }
     }
 }

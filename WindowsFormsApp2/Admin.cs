@@ -9,6 +9,70 @@ namespace WindowsFormsApp2
 {
     class Admin : User
     {
+
+        public void Restriction(string user)
+        {
+            string[] LogPass;
+            string str = "";
+            string text = "";
+            string[] lines = File.ReadAllLines(DataBank.path);
+            foreach (string s in lines)
+            {
+                LogPass = s.Split(',');
+                if (LogPass[0] == user)
+                {
+                    str = LogPass[0] + "," + LogPass[1] + ",true";
+                    text = text + str + "\n";
+                }
+                else
+                {
+                    str = LogPass[0] + "," + LogPass[1] + "," + LogPass[2];
+                    text = text + str + "\n";
+                }
+                
+
+            }
+            MessageBox.Show("Вы ограничили пароль");
+
+            //MessageBox.Show("весь текст\n" + text);
+
+            using (StreamWriter file = new StreamWriter(DataBank.path))
+            {
+                file.Write(text);
+            }
+        }
+        public void unRestriction(string user)
+        {
+            string[] LogPass;
+            string str = "";
+            string text = "";
+            string[] lines = File.ReadAllLines(DataBank.path);
+            foreach (string s in lines)
+            {
+                LogPass = s.Split(',');
+                if (LogPass[0] == user)
+                {
+                    str = LogPass[0] + "," + LogPass[1] + ",false";
+                    text = text + str + "\n";
+                }
+                else
+                {
+                    str = LogPass[0] + "," + LogPass[1] + "," + LogPass[2];
+                    text = text + str + "\n";
+                }
+
+
+            }
+            MessageBox.Show("Вы убрали ограничение пароля");
+
+            //MessageBox.Show("весь текст\n" + text);
+
+            using (StreamWriter file = new StreamWriter(DataBank.path))
+            {
+                file.Write(text);
+            }
+        }
+
         public void BlockUser(string user_to_block)
         {
             if ((DataBank.Block_Users.Contains(user_to_block)) == true)
