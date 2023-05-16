@@ -118,7 +118,7 @@ namespace WindowsFormsApp2
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Location = new System.Drawing.Point(512, 27);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(153, 108);
+            this.listBox1.Size = new System.Drawing.Size(153, 134);
             this.listBox1.TabIndex = 7;
             // 
             // button3
@@ -197,11 +197,11 @@ namespace WindowsFormsApp2
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(512, 141);
+            this.checkBox1.Location = new System.Drawing.Point(455, 167);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(172, 17);
+            this.checkBox1.Size = new System.Drawing.Size(219, 17);
             this.checkBox1.TabIndex = 16;
-            this.checkBox1.Text = "Ограничения пароля на всех";
+            this.checkBox1.Text = "Ограничения пароля при регистрации";
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
@@ -211,7 +211,7 @@ namespace WindowsFormsApp2
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(100, 36);
             this.button6.TabIndex = 17;
-            this.button6.Text = "Ограничение на пароль";
+            this.button6.Text = "Ограничение на смену пароля";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 

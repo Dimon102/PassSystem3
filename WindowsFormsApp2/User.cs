@@ -24,7 +24,7 @@ namespace WindowsFormsApp2
                 {
                     LogPass[1] = NewPassword;
                 }
-                str = LogPass[0] + "," + LogPass[1];
+                str = LogPass[0] + "," + LogPass[1] + "," + LogPass[2];
                 text = text + str + "\n";
 
             }
@@ -36,6 +36,55 @@ namespace WindowsFormsApp2
             {
                 file.Write(text);
             }
+        }
+
+        public virtual bool CheckPassword(string NewPassword, string OldPassword)
+        {
+            bool result = false;
+            bool answer;
+
+            string[] LogPass;
+
+            string[] lines = File.ReadAllLines(DataBank.path);
+            foreach (string s in lines)
+            {
+                LogPass = s.Split(',');
+                if (LogPass[0] == Login)
+                {
+                    if (Convert.ToBoolean(LogPass[2]) == true)
+                    {
+                        //MessageBox.Show("есть ограничение на пароль");
+                        answer = DataBank.PasswordCheck(NewPassword);
+                        if (answer == true)
+                        {
+                            //MessageBox.Show("Подходящий пароль");
+                            result = true;
+
+
+                        }
+                        else
+                        {
+                            //MessageBox.Show("Пароль слишком простой");
+                            result = false;
+
+                        }
+
+                    }
+                    else
+                    {
+                        //MessageBox.Show("нет ограничения на пароль");
+                        result = true;
+
+
+                    }
+                }
+
+
+
+            }
+            return result;
+            
+
         }
     }
 }

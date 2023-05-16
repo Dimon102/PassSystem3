@@ -1,5 +1,2 @@
-qwe,123
-ADMIN,1
-asdf,
-qwert,1234567890
-asd,123asdASD@!#
+ADMIN,1,false
+qwe,1,false

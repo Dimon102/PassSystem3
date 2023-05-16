@@ -9,12 +9,13 @@ namespace WindowsFormsApp2
 {
     class DataBank
     {
+        //public static string changePass = "";
         public static string Login = "";
         public static string[] Users_List;
         public static List<string> Block_Users = new List<string>();
-        public static string path = "C:\\Users\\user.AD\\source\\repos\\PassSystem3\\WindowsFormsApp2\\Users.txt";
-        public static string BlockUsersPath = "C:\\Users\\user.AD\\source\\repos\\PassSystem3\\WindowsFormsApp2\\blockUsers.txt";
-        public static string password_restrictionsPath = "C:\\Users\\user.AD\\source\\repos\\PassSystem3\\WindowsFormsApp2\\password_restrictions.txt";
+        //public static string path = "C:\\Users\\user.AD\\source\\repos\\PassSystem3\\WindowsFormsApp2\\Users.txt";
+        //public static string BlockUsersPath = "C:\\Users\\user.AD\\source\\repos\\PassSystem3\\WindowsFormsApp2\\blockUsers.txt";
+        //public static string password_restrictionsPath = "C:\\Users\\user.AD\\source\\repos\\PassSystem3\\WindowsFormsApp2\\password_restrictions.txt";
 
         public static string UpAlphavet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         public static string LowAlphavet = "abcdefghijklmnopqrstuvwxyz";
@@ -26,9 +27,9 @@ namespace WindowsFormsApp2
 
 
         public static bool password_restrictions = false;
-        //public static string path = "D:\\Дима\\ИНФ. БЕЗОПАСНОСТЬ И ЗАЩИТА ИНФОРМАЦИИ\\WindowsFormsApp2 (2)\\WindowsFormsApp2\\WindowsFormsApp2\\Users.txt";
-        //public static string BlockUsersPath = "D:\\Дима\\ИНФ. БЕЗОПАСНОСТЬ И ЗАЩИТА ИНФОРМАЦИИ\\WindowsFormsApp2 (2)\\WindowsFormsApp2\\WindowsFormsApp2\\blockUsers.txt";
-        //public static string password_restrictionsPath = "D:\\Дима\\ИНФ. БЕЗОПАСНОСТЬ И ЗАЩИТА ИНФОРМАЦИИ\\WindowsFormsApp2 (2)\\WindowsFormsApp2\\WindowsFormsApp2\\password_restrictions.txt";
+        public static string path = "D:\\Дима\\ИНФ. БЕЗОПАСНОСТЬ И ЗАЩИТА ИНФОРМАЦИИ\\PassSystem3\\WindowsFormsApp2\\Users.txt";
+        public static string BlockUsersPath = "D:\\Дима\\ИНФ. БЕЗОПАСНОСТЬ И ЗАЩИТА ИНФОРМАЦИИ\\PassSystem3\\WindowsFormsApp2\\BlockUsers.txt";
+        public static string password_restrictionsPath = "D:\\Дима\\ИНФ. БЕЗОПАСНОСТЬ И ЗАЩИТА ИНФОРМАЦИИ\\PassSystem3\\WindowsFormsApp2\\password_restrictions.txt";
 
 
         public static bool PasswordCheck(string password)
@@ -75,10 +76,10 @@ namespace WindowsFormsApp2
 
             }
 
-            MessageBox.Show(flagUpAlphavet.ToString());
-            MessageBox.Show(flagLowAlphavet.ToString());
-            MessageBox.Show(flagnumbers.ToString());
-            MessageBox.Show(flagspecSymbols.ToString());
+            //MessageBox.Show(flagUpAlphavet.ToString());
+            //MessageBox.Show(flagLowAlphavet.ToString());
+            //MessageBox.Show(flagnumbers.ToString());
+            //MessageBox.Show(flagspecSymbols.ToString());
 
 
             if (flagUpAlphavet && flagLowAlphavet && flagnumbers && flagspecSymbols)

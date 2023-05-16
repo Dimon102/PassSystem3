@@ -29,7 +29,17 @@ namespace WindowsFormsApp2
 
         private void button2_Click(object sender, EventArgs e)
         {
-            user?.User_Change_Password(textBox2.Text, textBox1.Text);
+            if (user?.CheckPassword(textBox2.Text, textBox1.Text) == true)
+            {
+                user?.User_Change_Password(textBox2.Text, textBox1.Text);
+
+            }
+            else
+            {
+                MessageBox.Show("Введённый пароль не подходит");
+
+            }
+
 
         }
 
