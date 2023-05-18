@@ -43,7 +43,7 @@ namespace WindowsFormsApp2
                 using (StreamWriter writer = new StreamWriter(DataBank.path, append: true))
                 {
                     writer.AutoFlush = true;
-                    writer.WriteLine(Login + "," + Password + ",false");
+                    writer.WriteLine(Login + "," + Password + ",false,8,false,false,false,false");
                 }
 
                 MessageBox.Show("Вы зарегестрировались");

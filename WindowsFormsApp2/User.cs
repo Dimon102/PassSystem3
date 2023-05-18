@@ -24,7 +24,7 @@ namespace WindowsFormsApp2
                 {
                     LogPass[1] = NewPassword;
                 }
-                str = LogPass[0] + "," + LogPass[1] + "," + LogPass[2];
+                str = LogPass[0] + "," + LogPass[1] + "," + LogPass[2] + "," + LogPass[3] + "," + LogPass[4] + "," + LogPass[5] + "," + LogPass[6] + "," + LogPass[7];
                 text = text + str + "\n";
 
             }

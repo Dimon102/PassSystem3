@@ -57,6 +57,8 @@ namespace WindowsFormsApp2
 
         private void button3_Click(object sender, EventArgs e)
         {
+            //бан
+
             admin.BlockUser(listBox1.SelectedItem.ToString());
             //MessageBox.Show(DataBank.Block_Users[0].ToString());
             listBox2.Items.Clear();
@@ -73,6 +75,7 @@ namespace WindowsFormsApp2
 
         private void button4_Click(object sender, EventArgs e)
         { 
+            //разбан
             admin.unBlockUser(listBox2.SelectedItem.ToString());
             listBox2.Items.Clear();
             listBox2.Items.AddRange(DataBank.Block_Users.ToArray());
@@ -80,6 +83,8 @@ namespace WindowsFormsApp2
 
         private void button5_Click(object sender, EventArgs e)
         {
+            //добавление нового пользователя с пустым паролем
+
             if (textBox3.Text == "")
             {
                 MessageBox.Show("Нужно обязательно ввести имя пользователя");
@@ -97,6 +102,8 @@ namespace WindowsFormsApp2
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
+            //ограничение при регистрации
+
             CheckBox checkBox = (CheckBox)sender;
             if (checkBox.Checked == true)
             {
@@ -117,7 +124,7 @@ namespace WindowsFormsApp2
 
         private void button6_Click(object sender, EventArgs e)
         {
-            //ограничение пароля
+            //ограничение пароля при смене пароля
             admin.Restriction(listBox1.SelectedItem.ToString());
 
         }
@@ -127,6 +134,71 @@ namespace WindowsFormsApp2
             //снять ограничение
             admin.unRestriction(listBox1.SelectedItem.ToString());
 
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            //цифры
+            CheckBox checkBox = (CheckBox)sender;
+            if (listBox1.SelectedItem == null)
+            {
+                MessageBox.Show("пользователь для ограничения не выбран");
+
+            }
+            else
+            {
+                admin.CheckNumbers(listBox1.SelectedItem.ToString(), checkBox.Checked);
+
+            }
+
+        }
+
+        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        {
+            //маленькие буквы
+            CheckBox checkBox = (CheckBox)sender;
+            if (listBox1.SelectedItem == null)
+            {
+                MessageBox.Show("пользователь для ограничения не выбран");
+
+            }
+            else
+            {
+                admin.CheckSmalLetters(listBox1.SelectedItem.ToString(), checkBox.Checked);
+
+            }
+        }
+
+        private void checkBox4_CheckedChanged(object sender, EventArgs e)
+        {
+            //больш буквы
+            CheckBox checkBox = (CheckBox)sender;
+            if (listBox1.SelectedItem == null)
+            {
+                MessageBox.Show("пользователь для ограничения не выбран");
+
+            }
+            else
+            {
+                admin.CheckBigLetters(listBox1.SelectedItem.ToString(), checkBox.Checked);
+
+            }
+        }
+
+        private void checkBox5_CheckedChanged(object sender, EventArgs e)
+        {
+            //спец символы
+            CheckBox checkBox = (CheckBox)sender;
+            if (listBox1.SelectedItem == null)
+            {
+                MessageBox.Show("пользователь для ограничения не выбран");
+
+            }
+            else
+            {
+                admin.CheckSymbols(listBox1.SelectedItem.ToString(), checkBox.Checked);
+
+            }
         }
     }
 }

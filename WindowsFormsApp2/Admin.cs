@@ -9,7 +9,254 @@ namespace WindowsFormsApp2
 {
     class Admin : User
     {
+        public void CheckSymbols(string user, bool checkBox)
+        {
+            if (checkBox == true)
+            {
+                string[] LogPass;
+                string str = "";
+                string text = "";
+                string[] lines = File.ReadAllLines(DataBank.path);
+                foreach (string s in lines)
+                {
+                    LogPass = s.Split(',');
+                    if (LogPass[0] == user)
+                    {
+                        str = LogPass[0] + "," + LogPass[1] + "," + LogPass[2] + "," + LogPass[3] + "," + LogPass[4] + "," + LogPass[5] + "," + LogPass[6] + ",true";
+                        text = text + str + "\n";
+                    }
+                    else
+                    {
+                        str = LogPass[0] + "," + LogPass[1] + "," + LogPass[2] + "," + LogPass[3] + "," + LogPass[4] + "," + LogPass[5] + "," + LogPass[6] + "," + LogPass[7];
+                        text = text + str + "\n";
+                    }
 
+
+                }
+                //MessageBox.Show("Вы ограничили символы");
+
+                using (StreamWriter file = new StreamWriter(DataBank.path))
+                {
+                    file.Write(text);
+                }
+            }
+            else
+            {
+                string[] LogPass;
+                string str = "";
+                string text = "";
+                string[] lines = File.ReadAllLines(DataBank.path);
+                foreach (string s in lines)
+                {
+                    LogPass = s.Split(',');
+                    if (LogPass[0] == user)
+                    {
+                        str = LogPass[0] + "," + LogPass[1] + "," + LogPass[2] + "," + LogPass[3] + "," + LogPass[4] + "," + LogPass[5] + "," + LogPass[6] + ",false";
+                        text = text + str + "\n";
+                    }
+                    else
+                    {
+                        str = LogPass[0] + "," + LogPass[1] + "," + LogPass[2] + "," + LogPass[3] + "," + LogPass[4] + "," + LogPass[5] + "," + LogPass[6] + "," + LogPass[7];
+                        text = text + str + "\n";
+                    }
+
+
+                }
+                //MessageBox.Show("Вы убрали ограничение на символы");
+
+                using (StreamWriter file = new StreamWriter(DataBank.path))
+                {
+                    file.Write(text);
+                }
+            }
+
+        }
+        public void CheckBigLetters(string user, bool checkBox)
+        {
+            if (checkBox == true)
+            {
+                string[] LogPass;
+                string str = "";
+                string text = "";
+                string[] lines = File.ReadAllLines(DataBank.path);
+                foreach (string s in lines)
+                {
+                    LogPass = s.Split(',');
+                    if (LogPass[0] == user)
+                    {
+                        str = LogPass[0] + "," + LogPass[1] + "," + LogPass[2] + "," + LogPass[3] + "," + LogPass[4] + "," + LogPass[5] + ",true," + LogPass[7];
+                        text = text + str + "\n";
+                    }
+                    else
+                    {
+                        str = LogPass[0] + "," + LogPass[1] + "," + LogPass[2] + "," + LogPass[3] + "," + LogPass[4] + "," + LogPass[5] + "," + LogPass[6] + "," + LogPass[7];
+                        text = text + str + "\n";
+                    }
+
+
+                }
+                //MessageBox.Show("Вы ограничили большие буквы");
+
+                using (StreamWriter file = new StreamWriter(DataBank.path))
+                {
+                    file.Write(text);
+                }
+            }
+            else
+            {
+                string[] LogPass;
+                string str = "";
+                string text = "";
+                string[] lines = File.ReadAllLines(DataBank.path);
+                foreach (string s in lines)
+                {
+                    LogPass = s.Split(',');
+                    if (LogPass[0] == user)
+                    {
+                        str = LogPass[0] + "," + LogPass[1] + "," + LogPass[2] + "," + LogPass[3] + "," + LogPass[4] + "," + LogPass[5] + ",false," + LogPass[7];
+                        text = text + str + "\n";
+                    }
+                    else
+                    {
+                        str = LogPass[0] + "," + LogPass[1] + "," + LogPass[2] + "," + LogPass[3] + "," + LogPass[4] + "," + LogPass[5] + "," + LogPass[6] + "," + LogPass[7];
+                        text = text + str + "\n";
+                    }
+
+
+                }
+                //MessageBox.Show("Вы убрали ограничение на большие буквы");
+
+                using (StreamWriter file = new StreamWriter(DataBank.path))
+                {
+                    file.Write(text);
+                }
+            }
+
+        }
+        public void CheckSmalLetters(string user, bool checkBox)
+        {
+            if (checkBox == true)
+            {
+                string[] LogPass;
+                string str = "";
+                string text = "";
+                string[] lines = File.ReadAllLines(DataBank.path);
+                foreach (string s in lines)
+                {
+                    LogPass = s.Split(',');
+                    if (LogPass[0] == user)
+                    {
+                        str = LogPass[0] + "," + LogPass[1] + "," + LogPass[2] + "," + LogPass[3] + "," + LogPass[4] + ",true," + LogPass[6] + "," + LogPass[7];
+                        text = text + str + "\n";
+                    }
+                    else
+                    {
+                        str = LogPass[0] + "," + LogPass[1] + "," + LogPass[2] + "," + LogPass[3] + "," + LogPass[4] + "," + LogPass[5] + "," + LogPass[6] + "," + LogPass[7];
+                        text = text + str + "\n";
+                    }
+
+
+                }
+                //MessageBox.Show("Вы ограничили маленькие буквы");
+
+                using (StreamWriter file = new StreamWriter(DataBank.path))
+                {
+                    file.Write(text);
+                }
+            }
+            else
+            {
+                string[] LogPass;
+                string str = "";
+                string text = "";
+                string[] lines = File.ReadAllLines(DataBank.path);
+                foreach (string s in lines)
+                {
+                    LogPass = s.Split(',');
+                    if (LogPass[0] == user)
+                    {
+                        str = LogPass[0] + "," + LogPass[1] + "," + LogPass[2] + "," + LogPass[3] + "," + LogPass[4] + ",false," + LogPass[6] + "," + LogPass[7];
+                        text = text + str + "\n";
+                    }
+                    else
+                    {
+                        str = LogPass[0] + "," + LogPass[1] + "," + LogPass[2] + "," + LogPass[3] + "," + LogPass[4] + "," + LogPass[5] + "," + LogPass[6] + "," + LogPass[7];
+                        text = text + str + "\n";
+                    }
+
+
+                }
+                //MessageBox.Show("Вы убрали ограничение на маленькие буквы");
+
+                using (StreamWriter file = new StreamWriter(DataBank.path))
+                {
+                    file.Write(text);
+                }
+            }
+
+        }
+        public void CheckNumbers(string user, bool checkBox)
+        {
+            if (checkBox == true)
+            {
+                string[] LogPass;
+                string str = "";
+                string text = "";
+                string[] lines = File.ReadAllLines(DataBank.path);
+                foreach (string s in lines)
+                {
+                    LogPass = s.Split(',');
+                    if (LogPass[0] == user)
+                    {
+                        str = LogPass[0] + "," + LogPass[1] + "," + LogPass[2] + "," + LogPass[3] + ",true," + LogPass[5] + "," + LogPass[6] + "," + LogPass[7];
+                        text = text + str + "\n";
+                    }
+                    else
+                    {
+                        str = LogPass[0] + "," + LogPass[1] + "," + LogPass[2] + "," + LogPass[3] + "," + LogPass[4] + "," + LogPass[5] + "," + LogPass[6] + "," + LogPass[7];
+                        text = text + str + "\n";
+                    }
+
+
+                }
+                //MessageBox.Show("Вы ограничили цифры");
+
+                using (StreamWriter file = new StreamWriter(DataBank.path))
+                {
+                    file.Write(text);
+                }
+            }
+            else
+            {
+                string[] LogPass;
+                string str = "";
+                string text = "";
+                string[] lines = File.ReadAllLines(DataBank.path);
+                foreach (string s in lines)
+                {
+                    LogPass = s.Split(',');
+                    if (LogPass[0] == user)
+                    {
+                        str = LogPass[0] + "," + LogPass[1] + "," + LogPass[2] + "," + LogPass[3] + ",false," + LogPass[5] + "," + LogPass[6] + "," + LogPass[7];
+                        text = text + str + "\n";
+                    }
+                    else
+                    {
+                        str = LogPass[0] + "," + LogPass[1] + "," + LogPass[2] + "," + LogPass[3] + "," + LogPass[4] + "," + LogPass[5] + "," + LogPass[6] + "," + LogPass[7];
+                        text = text + str + "\n";
+                    }
+
+
+                }
+                //MessageBox.Show("Вы убрали ограничение на цифры");
+
+                using (StreamWriter file = new StreamWriter(DataBank.path))
+                {
+                    file.Write(text);
+                }
+            }
+
+        }
         public void Restriction(string user)
         {
             string[] LogPass;
@@ -21,20 +268,18 @@ namespace WindowsFormsApp2
                 LogPass = s.Split(',');
                 if (LogPass[0] == user)
                 {
-                    str = LogPass[0] + "," + LogPass[1] + ",true";
+                    str = LogPass[0] + "," + LogPass[1] + ",true" + "," + LogPass[3] + "," + LogPass[4] + "," + LogPass[5] + "," + LogPass[6] + "," + LogPass[7];
                     text = text + str + "\n";
                 }
                 else
                 {
-                    str = LogPass[0] + "," + LogPass[1] + "," + LogPass[2];
+                    str = LogPass[0] + "," + LogPass[1] + "," + LogPass[2] + "," + LogPass[3] + "," + LogPass[4] + "," + LogPass[5] + "," + LogPass[6] + "," + LogPass[7];
                     text = text + str + "\n";
                 }
                 
 
             }
-            MessageBox.Show("Вы ограничили пароль");
-
-            //MessageBox.Show("весь текст\n" + text);
+            //MessageBox.Show("Вы ограничили пароль");
 
             using (StreamWriter file = new StreamWriter(DataBank.path))
             {
@@ -52,20 +297,19 @@ namespace WindowsFormsApp2
                 LogPass = s.Split(',');
                 if (LogPass[0] == user)
                 {
-                    str = LogPass[0] + "," + LogPass[1] + ",false";
+                    str = LogPass[0] + "," + LogPass[1] + ",false" + "," + LogPass[3] + "," + LogPass[4] + "," + LogPass[5] + "," + LogPass[6] + "," + LogPass[7];
                     text = text + str + "\n";
                 }
                 else
                 {
-                    str = LogPass[0] + "," + LogPass[1] + "," + LogPass[2];
+                    str = LogPass[0] + "," + LogPass[1] + "," + LogPass[2] + "," + LogPass[3] + "," + LogPass[4] + "," + LogPass[5] + "," + LogPass[6] + "," + LogPass[7];
                     text = text + str + "\n";
                 }
 
 
             }
-            MessageBox.Show("Вы убрали ограничение пароля");
+            //MessageBox.Show("Вы убрали ограничение пароля");
 
-            //MessageBox.Show("весь текст\n" + text);
 
             using (StreamWriter file = new StreamWriter(DataBank.path))
             {
@@ -140,7 +384,7 @@ namespace WindowsFormsApp2
                 using (StreamWriter writer = new StreamWriter(DataBank.path, append: true))
                 {
                     writer.AutoFlush = true;
-                    writer.WriteLine(Login + ", " + ", ");
+                    writer.WriteLine(Login + ", " + ",false,8,false,false,false,false");
                 }
 
                 MessageBox.Show("Вы зарегестрировали пользователя");

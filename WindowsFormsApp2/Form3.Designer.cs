@@ -256,6 +256,7 @@ namespace WindowsFormsApp2
             this.checkBox2.TabIndex = 21;
             this.checkBox2.Text = "Цифры";
             this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // checkBox3
             // 
@@ -264,8 +265,9 @@ namespace WindowsFormsApp2
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(117, 17);
             this.checkBox3.TabIndex = 22;
-            this.checkBox3.Text = "Маденькие буквы";
+            this.checkBox3.Text = "Маленькие буквы";
             this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
             // 
             // checkBox4
             // 
@@ -276,6 +278,7 @@ namespace WindowsFormsApp2
             this.checkBox4.TabIndex = 23;
             this.checkBox4.Text = "Большие буквы";
             this.checkBox4.UseVisualStyleBackColor = true;
+            this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged);
             // 
             // checkBox5
             // 
@@ -286,6 +289,7 @@ namespace WindowsFormsApp2
             this.checkBox5.TabIndex = 24;
             this.checkBox5.Text = "Спец. символы";
             this.checkBox5.UseVisualStyleBackColor = true;
+            this.checkBox5.CheckedChanged += new System.EventHandler(this.checkBox5_CheckedChanged);
             // 
             // Form3
             // 
