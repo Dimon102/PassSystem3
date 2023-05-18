@@ -50,6 +50,12 @@ namespace WindowsFormsApp2
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.checkBox5 = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // button1
@@ -207,7 +213,7 @@ namespace WindowsFormsApp2
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(406, 76);
+            this.button6.Location = new System.Drawing.Point(49, 240);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(100, 36);
             this.button6.TabIndex = 17;
@@ -217,7 +223,7 @@ namespace WindowsFormsApp2
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(406, 118);
+            this.button7.Location = new System.Drawing.Point(49, 282);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(100, 37);
             this.button7.TabIndex = 18;
@@ -225,11 +231,73 @@ namespace WindowsFormsApp2
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(167, 240);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(100, 20);
+            this.textBox4.TabIndex = 19;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(164, 224);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(79, 13);
+            this.label7.TabIndex = 20;
+            this.label7.Text = "Длина пароля";
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(167, 267);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(62, 17);
+            this.checkBox2.TabIndex = 21;
+            this.checkBox2.Text = "Цифры";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Location = new System.Drawing.Point(167, 291);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(117, 17);
+            this.checkBox3.TabIndex = 22;
+            this.checkBox3.Text = "Маденькие буквы";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // checkBox4
+            // 
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.Location = new System.Drawing.Point(167, 315);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(105, 17);
+            this.checkBox4.TabIndex = 23;
+            this.checkBox4.Text = "Большие буквы";
+            this.checkBox4.UseVisualStyleBackColor = true;
+            // 
+            // checkBox5
+            // 
+            this.checkBox5.AutoSize = true;
+            this.checkBox5.Location = new System.Drawing.Point(167, 339);
+            this.checkBox5.Name = "checkBox5";
+            this.checkBox5.Size = new System.Drawing.Size(103, 17);
+            this.checkBox5.TabIndex = 24;
+            this.checkBox5.Text = "Спец. символы";
+            this.checkBox5.UseVisualStyleBackColor = true;
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(686, 390);
+            this.Controls.Add(this.checkBox5);
+            this.Controls.Add(this.checkBox4);
+            this.Controls.Add(this.checkBox3);
+            this.Controls.Add(this.checkBox2);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.textBox4);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.checkBox1);
@@ -278,5 +346,11 @@ namespace WindowsFormsApp2
         private CheckBox checkBox1;
         private Button button6;
         private Button button7;
+        private TextBox textBox4;
+        private Label label7;
+        private CheckBox checkBox2;
+        private CheckBox checkBox3;
+        private CheckBox checkBox4;
+        private CheckBox checkBox5;
     }
 }

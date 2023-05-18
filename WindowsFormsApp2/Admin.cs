@@ -140,7 +140,7 @@ namespace WindowsFormsApp2
                 using (StreamWriter writer = new StreamWriter(DataBank.path, append: true))
                 {
                     writer.AutoFlush = true;
-                    writer.WriteLine(Login + ",");
+                    writer.WriteLine(Login + ", " + ", ");
                 }
 
                 MessageBox.Show("Вы зарегестрировали пользователя");
