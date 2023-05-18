@@ -42,6 +42,8 @@ namespace WindowsFormsApp2
         {
             bool result = false;
             bool answer;
+            string type = "Change";
+
 
             string[] LogPass;
 
@@ -54,7 +56,7 @@ namespace WindowsFormsApp2
                     if (Convert.ToBoolean(LogPass[2]) == true)
                     {
                         //MessageBox.Show("есть ограничение на пароль");
-                        answer = DataBank.PasswordCheck(NewPassword);
+                        answer = DataBank.PasswordCheck(NewPassword, type, LogPass[3], LogPass[4], LogPass[5], LogPass[6], LogPass[7]);
                         if (answer == true)
                         {
                             //MessageBox.Show("Подходящий пароль");

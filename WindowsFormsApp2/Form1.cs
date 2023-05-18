@@ -46,9 +46,10 @@ namespace WindowsFormsApp2
 
 
             bool answer;
+            string type = "Reg";
             if (DataBank.password_restrictions == true)
             {
-                answer = DataBank.PasswordCheck(textBox1.Text);
+                answer = DataBank.PasswordCheck(textBox1.Text, type, null, null, null, null, null);
                 if (answer == true)
                 {
                     users_Operations.Users_add(textBox2.Text, textBox1.Text);
