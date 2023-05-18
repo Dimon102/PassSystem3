@@ -257,7 +257,7 @@ namespace WindowsFormsApp2
             }
 
         }
-        public void Restriction(string user)
+        public void Restriction(string user, string lenPass)
         {
             string[] LogPass;
             string str = "";
@@ -268,7 +268,7 @@ namespace WindowsFormsApp2
                 LogPass = s.Split(',');
                 if (LogPass[0] == user)
                 {
-                    str = LogPass[0] + "," + LogPass[1] + ",true" + "," + LogPass[3] + "," + LogPass[4] + "," + LogPass[5] + "," + LogPass[6] + "," + LogPass[7];
+                    str = LogPass[0] + "," + LogPass[1] + ",true" + "," + lenPass + "," + LogPass[4] + "," + LogPass[5] + "," + LogPass[6] + "," + LogPass[7];
                     text = text + str + "\n";
                 }
                 else

@@ -125,7 +125,25 @@ namespace WindowsFormsApp2
         private void button6_Click(object sender, EventArgs e)
         {
             //ограничение пароля при смене пароля
-            admin.Restriction(listBox1.SelectedItem.ToString());
+            if (listBox1.SelectedItem == null)
+            {
+                MessageBox.Show("пользователь для ограничения не выбран");
+
+            }
+            else
+            {
+                if (textBox4.Text == null)
+                {
+                    MessageBox.Show("ограничение длины не выбрано");
+
+                }
+                else
+                {
+                    admin.Restriction(listBox1.SelectedItem.ToString(), textBox4.Text);
+
+                }
+            }
+            
 
         }
 

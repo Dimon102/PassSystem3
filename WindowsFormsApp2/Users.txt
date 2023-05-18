@@ -1,2 +1,2 @@
 ADMIN,1,false,8,false,false,false,false
-qwe,1,false,8,false,false,false,false
+qwe,1,false,10,false,false,false,false
