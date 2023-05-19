@@ -297,7 +297,9 @@ namespace WindowsFormsApp2
                 LogPass = s.Split(',');
                 if (LogPass[0] == user)
                 {
-                    str = LogPass[0] + "," + LogPass[1] + ",false" + "," + LogPass[3] + "," + LogPass[4] + "," + LogPass[5] + "," + LogPass[6] + "," + LogPass[7];
+                    //str = LogPass[0] + "," + LogPass[1] + ",false" + "," + LogPass[3] + "," + LogPass[4] + "," + LogPass[5] + "," + LogPass[6] + "," + LogPass[7];
+                    str = LogPass[0] + "," + LogPass[1] + ",false" + "," + LogPass[3] + ",false,false,false,false";
+
                     text = text + str + "\n";
                 }
                 else

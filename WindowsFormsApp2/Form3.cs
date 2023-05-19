@@ -218,5 +218,71 @@ namespace WindowsFormsApp2
 
             }
         }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string user = listBox1.SelectedItem.ToString();
+            string accessNumbers = "";
+            string accessSLet = "";
+            string accessBLet = "";
+            string accessSymbols = "";
+            // получаем данные из файла выделен чекбокс или нет
+            string[] LogPass;
+            string[] lines = File.ReadAllLines(DataBank.path);
+            foreach (string s in lines)
+            {
+                LogPass = s.Split(',');
+                if (LogPass[0] == user)
+                {
+                    accessNumbers = LogPass[4];
+                    accessSLet = LogPass[5];
+                    accessBLet = LogPass[6];
+                    accessSymbols = LogPass[7];
+                }
+            }
+
+
+            // ставим или убираем галочки 
+            if (Convert.ToBoolean(accessNumbers) == true)
+            {
+                checkBox2.Checked = true;
+
+            }
+            else
+            {
+                checkBox2.Checked = false;
+            }
+
+            if (Convert.ToBoolean(accessSLet) == true)
+            {
+                checkBox3.Checked = true;
+
+            }
+            else
+            {
+                checkBox3.Checked = false;
+            }
+
+            if (Convert.ToBoolean(accessBLet) == true)
+            {
+                checkBox4.Checked = true;
+
+            }
+            else
+            {
+                checkBox4.Checked = false;
+            }
+
+            if (Convert.ToBoolean(accessSymbols) == true)
+            {
+                checkBox5.Checked = true;
+
+            }
+            else
+            {
+                checkBox5.Checked = false;
+            }
+
+        }
     }
 }
