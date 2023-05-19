@@ -6,9 +6,49 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp2
 {
-    internal class lab5
+    public class Model
     {
+        List<User> users;
+        public string firstLogin;
+        public string firstPass;
+
+        int wrongAttempts;
+        int allowedAttempts;
+        public int AllowedAttempts { get { return this.allowedAttempts; } }
+        public bool exit;
+
+        string pathToSavedUsers = "Userlist.txt";
+        string pathToDictionary = "Dictionary.txt";
+        string[] dictionary;
+
+        long startTime;
+        public delegate void TryPassword(string pass);
+        public event TryPassword OnTryPassword;
+        DateTimeOffset dto;
         public bool bruteStop;
+
+
+        public Model(int allowedAttempts = 3)
+        {
+            firstLogin = "";
+            firstPass = "";
+            wrongAttempts = 0;
+            this.allowedAttempts = allowedAttempts;
+            exit = false;
+
+            startTime = 0;
+            bruteStop = false;
+            //this.dto = new DateTimeOffset(DateTime.UtcNow);
+            this.dto = DateTime.Now;
+            /*
+                        string temp = "";
+                        foreach (User user in users)
+                        {
+                            temp += user.ToString();
+                        }
+                        MessageBox.Show(temp);
+            */
+        }
 
         public bool TryBrute(string name, int passLength, TextBox textbox, Label label, Label label3)
         {
@@ -82,44 +122,6 @@ namespace WindowsFormsApp2
             }
             this.startTime = 0;
             return false;
-        }
-
-
-        public double CheckPassBruteTime(string password, int speed)
-        {
-
-            bool upper = false;
-            bool lower = false;
-            bool digits = false;
-            bool special = false;
-            string speacials = "!\"#$%&\\()*+-./:;<=>?@[\\]^_`{|}~";
-            foreach (char c in password)
-            {
-                if (Char.IsLetter(c))
-                {
-                    if (Char.IsUpper(c))
-                        upper = true;
-                    if (Char.IsLower(c))
-                        lower = true;
-                }
-                if (Char.IsDigit(c))
-                    digits = true;
-                if (speacials.Contains(c))
-                    special = true;
-            }
-
-            float power = 0;
-            if (upper)
-                power += 26;
-            if (lower)
-                power += 26;
-            if (digits)
-                power += 10;
-            if (special)
-                power += 33;
-
-
-            return (double)(Math.Pow(power, password.Length)) / speed;
         }
     }
 }
