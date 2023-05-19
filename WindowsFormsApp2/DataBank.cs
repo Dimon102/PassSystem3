@@ -27,9 +27,9 @@ namespace WindowsFormsApp2
 
 
         public static bool password_restrictions = false;
-        public static string path = "D:\\Дима\\ИНФ. БЕЗОПАСНОСТЬ И ЗАЩИТА ИНФОРМАЦИИ\\PassSystem3\\WindowsFormsApp2\\Users.txt";
-        public static string BlockUsersPath = "D:\\Дима\\ИНФ. БЕЗОПАСНОСТЬ И ЗАЩИТА ИНФОРМАЦИИ\\PassSystem3\\WindowsFormsApp2\\BlockUsers.txt";
-        public static string password_restrictionsPath = "D:\\Дима\\ИНФ. БЕЗОПАСНОСТЬ И ЗАЩИТА ИНФОРМАЦИИ\\PassSystem3\\WindowsFormsApp2\\password_restrictions.txt";
+        public static string path = @"D:\Дима\ИНФ. БЕЗОПАСНОСТЬ И ЗАЩИТА ИНФОРМАЦИИ\BruteForce\WindowsFormsApp2\Users.txt";
+        public static string BlockUsersPath = @"D:\Дима\ИНФ. БЕЗОПАСНОСТЬ И ЗАЩИТА ИНФОРМАЦИИ\BruteForce\WindowsFormsApp2\BlockUsers.txt";
+        public static string password_restrictionsPath = @"D:\Дима\ИНФ. БЕЗОПАСНОСТЬ И ЗАЩИТА ИНФОРМАЦИИ\BruteForce\WindowsFormsApp2\password_restrictions.txt";
 
         public static bool Reverse(bool restriction)
         {
